@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tamakiii-sandbox/hello-videojs/issues"
   },
-  "homepage": "https://github.com/tamakiii-sandbox/hello-videojs#readme"
+  "homepage": "https://github.com/tamakiii-sandbox/hello-videojs#readme",
+  "dependencies": {
+    "video.js": "^7.11.8"
+  }
 }
