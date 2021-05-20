@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charSet="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- <meta name="apple&#45;mobile&#45;web&#45;app&#45;status&#45;bar&#45;style" content="black&#45;translucent"> -->
+    <!-- <meta name="apple&#45;mobile&#45;web&#45;app&#45;status&#45;bar&#45;style" content="black"> -->
+    <meta name="apple-mobile-web-app-title" content="test page">
+    <link rel="apple-touch-icon" href="/image/icon/icon-72x72.png" sizes="72x72">
+    <link rel="apple-touch-icon" href="/image/icon/icon-114x114.png" sizes="114x114">
+    <link rel="apple-touch-icon" href="/image/icon/icon-120x120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/image/icon/icon-144x144.png" sizes="144x144">
+    <link href="/node_modules/video.js/dist/video-js.min.css" rel="stylesheet">
+    <script src="/node_modules/video.js/dist/video.min.js"></script>
+    <script src="/full-screen/main.js"></script>
+    <script>
+
+      // document.addEventListener('DOMContentLoaded', main, false);
+            // document.addEventListener('DOMContentLoaded', () => {
+            //         document.querySelector('#full-screen').addEventListener('click', () => { console.log('.'); window.scrollTo(0,1); }); });
+
+      // if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+      //   /* iOS hides Safari address bar */
+      //   window.addEventListener("load",function() {
+      //   setTimeout(function() {
+      //     if (window.pageYOffset !== 0) return;
+		  //       window.scrollTo(0, window.pageYOffset + 1);
+      //         alert('done');
+      //       }, 1000);
+      //     });
+      // }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const button = document.querySelector('#rotate');
+          button.addEventListener('click', () => {
+            const width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            const height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+            const video = document.querySelector('#my-player');
+            video.classList.add('rotated');
+            video.style.width = `${height}px`;
+            video.style.height = `${width}px`;
+            video.style.top = `${height/2-140}px`;
+            video.style.right = `-${widh}px`;
+            video.style.background = 'yellow';
+            video.style.transform = "rotate(90deg)";
+            // video.style.margin = '20vh';
+          });
+      });
+
+    </script>
+    <style type="text/css">
+
+      body {
+        background-color: red;
+        min-height: 100vh;
+      }
+
+      .rotated {
+        transform: rotate(90deg);
+        position: absolute;
+      }
+
+    </style>
+  </head>
+  <body>
+    <section>
+      <input type="button" value="Full Screen" id="full-screen" />
+      <input type="button" value="Rotate" id="rotate" />
+    </section>
+    <section>
+
+    <!--
+    <div id="my-player"></div>
+    <script>
+
+      var player = videojs('my-player');
+      var button = videojs.getComponent('Button');
+      var button = new Button(player, {
+        clickHandler: function(event) {
+          videojs.log('Clicked');
+        }
+      });
+
+      // console.log(button.el());
+
+    </script>
+    -->
+
+    <video
+      id="my-player"
+      class="video-js"
+      controls
+      preload="auto"
+      poster="//vjs.zencdn.net/v/oceans.png"
+      data-setup="{}"
+      width="280" height="140"
+      playsinline
+      webkit-playsinline
+      >
+      <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
+      <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm"></source>
+      <source src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg"></source>
+      <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank">
+        supports HTML5 video
+      </a>
+      </p>
+    </video>
+
+    </section>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charSet="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="apple-touch-icon" href="/image/icon/icon-72x72.png" sizes="72x72">
+    <link rel="apple-touch-icon" href="/image/icon/icon-114x114.png" sizes="114x114">
+    <link rel="apple-touch-icon" href="/image/icon/icon-120x120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/image/icon/icon-144x144.png" sizes="144x144">
+    <!-- <script type="module" src="/node_modules/safe&#45;area&#45;insets/out/index.js"> -->
+    <script> let module = {} </script>
+    <!-- <script type="module" src="/node_modules/safe&#45;area&#45;insets/out/index.js"></script> -->
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+      // const safeAreaInsets = require('safe-area-insets')
+      // console.log(safeAreaInsets)
+      // console.log(window.getComputedStyle(document.documentElement));
+      const cs = getComputedStyle(document.documentElement);
+              console.log(cs);
+      console.log(cs.getPropertyValue('env(safe-area-inset-top)'));
+              console.log(getComputedStyle(document.documentElement).getPropertyValue("--sat"));
+
+      // alert(window.getComputedStyle(document.documentElement).getPropertyValue("--sat"));
+
+      //
+      // console.log('safeAreaInsets.support',safeAreaInsets.support)
+      // console.log('safe-area-inset-top', safeAreaInsets.top)
+      // console.log('safe-area-inset-left', safeAreaInsets.left)
+      // console.log('safe-area-inset-right', safeAreaInsets.right)
+      // console.log('safe-area-inset-bottom', safeAreaInsets.bottom)
+      //
+      // safeAreaInsets.onChange(function(style) {
+      //     console.log(style)
+      // })
+      })
+    </script>
+
+    <style type="text/css">
+
+      body {
+        background-color: green;
+        min-height: 100vh;
+      }
+
+    </style>
+  </head>
+  <body>
+    safe-area-inset
+  </body>
+</html>
