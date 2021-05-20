@@ -18,5 +18,8 @@
   "homepage": "https://github.com/tamakiii-sandbox/hello-videojs#readme",
   "dependencies": {
     "video.js": "^7.11.8"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3"
   }
 }
