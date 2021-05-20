@@ -49,6 +49,22 @@
             video.style.transform = "rotate(90deg)";
             // video.style.margin = '20vh';
           });
+
+          window.addEventListener('orientationchange', () => {
+            console.log('detected');
+            const query = window.matchMedia("(orientation: portrait)");
+            const video = document.querySelector('#my-player');
+
+            if (query.matches) {
+              video.classList.add('portrait');
+              video.classList.remove('landscape');
+              console.log('Portrait');
+            } else {
+              video.classList.add('landscape');
+              video.classList.remove('portrait');
+              console.log('Landscape');
+            };
+        });
       });
 
     </script>
@@ -56,6 +72,18 @@
 
       body {
         background-color: red;
+        min-height: 100vh;
+      }
+
+      #my-player {
+        width: 100%;
+      }
+
+      #my-player.landscape {
+        min-height: 30vh;
+      }
+
+      #my-player.portrait {
         min-height: 100vh;
       }
 
@@ -97,7 +125,6 @@
       preload="auto"
       poster="//vjs.zencdn.net/v/oceans.png"
       data-setup="{}"
-      width="280" height="140"
       playsinline
       webkit-playsinline
       >
