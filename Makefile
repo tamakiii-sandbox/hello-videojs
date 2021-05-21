@@ -13,7 +13,7 @@ setup: \
 	node_modules
 
 server:
-	npx --no-install http-server -a 0.0.0.0 -p 80 .
+	npx --no-install http-server -a 0.0.0.0 -p 80 --cors .
 
 node_modules:
 	npm install --dev
