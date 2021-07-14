@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/tamakiii-sandbox/hello-videojs#readme",
   "dependencies": {
+    "tailwindcss": "^2.2.4",
     "video.js": "^7.11.8"
   },
   "devDependencies": {
